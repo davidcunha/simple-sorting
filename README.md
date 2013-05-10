@@ -1,4 +1,4 @@
-simple-sorting
+Simple Sorting Algorithms
 ==============
 
-Simple Sorting Algorithms (Bubble Sort, Selection Sort and Insertion Sort)
+Bubble Sort, Selection Sort and Insertion Sort
