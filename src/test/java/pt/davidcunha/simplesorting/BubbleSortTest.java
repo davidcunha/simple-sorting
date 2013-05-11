@@ -35,4 +35,5 @@ public class BubbleSortTest {
 
         assertEquals("20\n30\n50\n80\n120\n", arr.display());
     }
+    
 }

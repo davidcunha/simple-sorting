@@ -51,4 +51,25 @@ public class ArrayImpl {
         }
         return result;
     }
+
+    public int binarySearch(long n) {
+        int lb = 0;
+        int ub = arr.length - 1;
+        int mid;
+
+        while (true) {
+            mid = (lb + ub) / 2;
+            if (arr[mid] == n) {
+                return mid;
+            } else if (lb > ub) {
+                return arr.length;
+            } else {
+                if (n > arr[mid]) {
+                    lb = mid + 1;
+                } else {
+                    ub = mid - 1;
+                }
+            }
+        }
+    }
 }
