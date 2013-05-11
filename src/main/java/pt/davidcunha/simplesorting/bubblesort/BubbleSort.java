@@ -5,14 +5,19 @@ package pt.davidcunha.simplesorting.bubblesort;
 
 /**
  *
- * @author David Cunha <david-g-cunha AT ptinovacao DOT pt>
+ * @author David Cunha <davidgoncalvescunha AT gmail DOT pt>
  */
 public class BubbleSort {
 
-    private long[] arr;
+    private static long[] arr;
 
-    public void bubbleSort(long[] arr) {
-        this.arr = arr;
+    /**
+     * Run Bubble Sort algorithm
+     *
+     * @param array data structure used to run the algorithm
+     */
+    public static void run(long[] array) {
+        arr = array;
 
         for (int i = arr.length - 1; i > 1; i--) {
             for (int j = 0; j < i; j++) {
@@ -23,7 +28,13 @@ public class BubbleSort {
         }
     }
 
-    public void swap(int a, int b) {
+    /**
+     * Swap function
+     *
+     * @param a number to swap with the second argument
+     * @param b number to swap with the first argument
+     */
+    private static void swap(int a, int b) {
         long temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
