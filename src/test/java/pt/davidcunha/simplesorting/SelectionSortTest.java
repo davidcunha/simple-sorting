@@ -2,12 +2,12 @@ package pt.davidcunha.simplesorting;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import pt.davidcunha.simplesorting.bubblesort.BubbleSort;
+import pt.davidcunha.simplesorting.selectionsort.SelectionSort;
 
 /**
- * Unit test for Bubble Sort
+ * Unit test for Selection Sort
  */
-public class BubbleSortTest {
+public class SelectionSortTest {
 
     @Test
     public void setup() {
@@ -22,7 +22,7 @@ public class BubbleSortTest {
     }
 
     @Test
-    public void bubbleSort() {
+    public void selectionSort() {
         ArrayImpl arr = new ArrayImpl(5);
         arr.insert(50);
         arr.insert(120);
@@ -31,7 +31,7 @@ public class BubbleSortTest {
         arr.insert(30);
         long[] a = arr.getArr();
         
-        BubbleSort.run(a);
+        SelectionSort.run(a);
 
         assertEquals("20\n30\n50\n80\n120\n", arr.display());
     }
