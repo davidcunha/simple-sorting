@@ -13,14 +13,6 @@ public class ArrayImpl {
     private long[] arr;
 
     /**
-     * ArrayImpl getter
-     *
-     */
-    public long[] getArr() {
-        return arr;
-    }
-
-    /**
      * ArrayImpl public constructor
      *
      * @param max array initialization
@@ -28,6 +20,14 @@ public class ArrayImpl {
     public ArrayImpl(int max) {
         arr = new long[max];
         nElemns = 0;
+    }
+
+    /**
+     * ArrayImpl getter
+     *
+     */
+    public long[] getArr() {
+        return arr;
     }
 
     /**
