@@ -44,7 +44,7 @@ public class ArrayImpl {
     /**
      * Display function
      *
-     * @return
+     * @return string with all elements
      */
     public String display() {
         StringBuilder sb = new StringBuilder();
