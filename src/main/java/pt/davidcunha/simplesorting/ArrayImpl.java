@@ -25,6 +25,7 @@ public class ArrayImpl {
     /**
      * ArrayImpl getter
      *
+     * @return array
      */
     public long[] getArr() {
         return arr;
@@ -43,15 +44,23 @@ public class ArrayImpl {
     /**
      * Display function
      *
+     * @return
      */
     public String display() {
-        String result = "";
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < nElemns; i++) {
-            result += arr[i] + "\n";
+            sb.append(arr[i]);
+            sb.append("\n");
         }
-        return result;
+        return sb.toString();
     }
 
+    /**
+     * ArrayImpl binary search
+     *
+     * @param n element to be searched
+     * @return element
+     */
     public int binarySearch(long n) {
         int lb = 0;
         int ub = arr.length - 1;
