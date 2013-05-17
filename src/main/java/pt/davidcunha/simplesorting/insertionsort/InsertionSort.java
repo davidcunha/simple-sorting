@@ -3,8 +3,6 @@
  */
 package pt.davidcunha.simplesorting.insertionsort;
 
-import pt.davidcunha.simplesorting.ArrayImpl;
-
 /**
  *
  * @author David Cunha <davidgoncalvescunha AT gmail DOT pt>
