@@ -29,9 +29,8 @@ public class InsertionSortTest {
         arr.insert(20);
         arr.insert(80);
         arr.insert(30);
-        long[] a = arr.getArr();
 
-        InsertionSort.run(a);
+        InsertionSort.run(arr.getArr());
 
         assertEquals("20\n30\n50\n80\n120\n", arr.display());
     }
