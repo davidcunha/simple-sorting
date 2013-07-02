@@ -10,3 +10,4 @@ Bubble Sort, Selection Sort and Insertion Sort
 | Bubble Sort | O(N^2) |
 | Selection Sort | O(N^2) |
 | Insertion Sort | O(N^2) |
+| Merge Sort | O(N*log(N)) |
