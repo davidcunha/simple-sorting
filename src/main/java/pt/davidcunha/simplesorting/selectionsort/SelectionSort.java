@@ -3,6 +3,8 @@
  */
 package pt.davidcunha.simplesorting.selectionsort;
 
+import pt.davidcunha.simplesorting.ArrayImpl;
+
 /**
  *
  * @author David Cunha <davidgoncalvescunha AT gmail DOT pt>
@@ -16,8 +18,8 @@ public class SelectionSort {
      *
      * @param array data structure used to run the algorithm
      */
-    public static void run(long[] array) {
-        arr = array;
+    public static void run(ArrayImpl array) {
+        arr = array.getArr();
 
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j < arr.length; j++) {

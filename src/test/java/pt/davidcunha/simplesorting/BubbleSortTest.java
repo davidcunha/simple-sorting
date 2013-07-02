@@ -30,7 +30,7 @@ public class BubbleSortTest {
         arr.insert(80);
         arr.insert(30);
         
-        BubbleSort.run(arr.getArr());
+        BubbleSort.run(arr);
 
         assertEquals("20\n30\n50\n80\n120\n", arr.display());
     }

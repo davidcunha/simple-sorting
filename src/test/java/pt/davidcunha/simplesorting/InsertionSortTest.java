@@ -30,7 +30,7 @@ public class InsertionSortTest {
         arr.insert(80);
         arr.insert(30);
 
-        InsertionSort.run(arr.getArr());
+        InsertionSort.run(arr);
 
         assertEquals("20\n30\n50\n80\n120\n", arr.display());
     }

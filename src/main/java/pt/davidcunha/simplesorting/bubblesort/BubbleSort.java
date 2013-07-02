@@ -3,6 +3,8 @@
  */
 package pt.davidcunha.simplesorting.bubblesort;
 
+import pt.davidcunha.simplesorting.ArrayImpl;
+
 /**
  *
  * @author David Cunha <davidgoncalvescunha AT gmail DOT pt>
@@ -16,8 +18,8 @@ public class BubbleSort {
      *
      * @param array data structure used to run the algorithm
      */
-    public static void run(long[] array) {
-        arr = array;
+    public static void run(ArrayImpl array) {
+        arr = array.getArr();
 
         for (int i = arr.length - 1; i > 1; i--) {
             for (int j = 0; j < i; j++) {
