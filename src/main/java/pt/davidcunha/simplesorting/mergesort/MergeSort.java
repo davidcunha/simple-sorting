@@ -11,35 +11,80 @@ import pt.davidcunha.simplesorting.ArrayImpl;
  */
 public class MergeSort {
 
-      /**
+    private long[] arr;
+
+    public MergeSort(ArrayImpl initArray) {
+        this.arr = initArray.getArr();
+    }
+
+    /**
      * Run Merge Sort algorithm
      *
-     * @param A first data structure used to run the algorithm
-     * @param B second data structure used to run the algorithm
-     * @param C merged data structure
+     * @param workspace array to work with in the merge process
+     * @param lb lower bound from the array
+     * @param ub upper bound from the array
      */
-    public static void run(ArrayImpl A, ArrayImpl B, ArrayImpl C) {
-        long[] a = A.getArr();
-        long[] b = B.getArr();
-        int ca = 0, cb = 0;
+    public void run(long[] workspace, int lb, int ub) {
 
-        while (ca < a.length && cb < b.length) {
-            if (a[ca] < b[cb]) {
-                C.insert(a[ca++]);
+        if (lb == ub) {
+            return;
+        } else {
+            int mid = (lb + ub) / 2;
+            run(workspace, lb, mid); //run algorithm in the first half
+            run(workspace, mid + 1, ub);//run algorithm in the second half
+            this.merge(workspace, lb, mid + 1, ub); //merge
+        }
+    }
+
+    /**
+     * Merge process
+     *
+     * @param workspace array to work with in the merge process
+     * @param lb lower bound from the array
+     * @param mid midpoint from the array
+     * @param ub upper bound from the array
+     */
+    private void merge(long[] workspace, int lb, int mid, int ub) {
+        int i = 0;
+        int nItems = ub - lb + 1;
+        int cinit = lb;
+        int cmiddle = mid - 1;
+
+        while (cinit <= cmiddle && mid <= ub) {
+            if (arr[cinit] < arr[mid]) {
+                workspace[i++] = arr[cinit++];
             } else {
-                C.insert(b[cb++]);
+                workspace[i++] = arr[mid++];
             }
         }
 
-        //complete merge process if there is more items in A
-        while (ca < a.length) {
-            C.insert(a[ca++]);
+        //complete merge process if there is more items in the first half
+        while (cinit <= cmiddle) {
+            workspace[i++] = arr[cinit++];
         }
 
-        //complete merge process if there is more items in B
-        while (cb < b.length) {
-            C.insert(b[cb++]);
+        //complete merge process if there is more items in the second half
+        while (mid <= ub) {
+            workspace[i++] = arr[mid++];
         }
 
+        //populate final array with result
+        for (int j = 0; j < nItems; j++) {
+            arr[lb + j] = workspace[j];
+        }
+    }
+
+    /**
+     * Display function
+     *
+     * @return string with all elements
+     */
+    public String display() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            sb.append(arr[i]);
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 }
