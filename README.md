@@ -3,7 +3,7 @@ Simple Sorting Algorithms
 
 [![Build Status](https://travis-ci.org/davidcunha/simple-sorting.png?branch=master)](https://travis-ci.org/davidcunha/simple-sorting)
 
-Bubble Sort, Selection Sort and Insertion Sort
+Bubble Sort, Selection Sort, Insertion Sort and Merge Sort
 
 | Algorithm | Time Complexity |
 | ------------- |:-------------:|
