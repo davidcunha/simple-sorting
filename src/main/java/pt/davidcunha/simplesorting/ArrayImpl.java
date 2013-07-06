@@ -3,6 +3,8 @@
  */
 package pt.davidcunha.simplesorting;
 
+import java.util.Arrays;
+
 /**
  *
  * @author David Cunha <davidgoncalvescunha AT gmail DOT pt>
@@ -47,12 +49,7 @@ public class ArrayImpl {
      * @return string with all elements
      */
     public String display() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < nElemns; i++) {
-            sb.append(arr[i]);
-            sb.append("\n");
-        }
-        return sb.toString();
+        return Arrays.toString(arr);
     }
 
     /**

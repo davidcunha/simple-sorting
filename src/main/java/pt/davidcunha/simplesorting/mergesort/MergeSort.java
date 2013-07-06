@@ -3,6 +3,7 @@
  */
 package pt.davidcunha.simplesorting.mergesort;
 
+import java.util.Arrays;
 import pt.davidcunha.simplesorting.ArrayImpl;
 
 /**
@@ -80,11 +81,6 @@ public class MergeSort {
      * @return string with all elements
      */
     public String display() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < arr.length; i++) {
-            sb.append(arr[i]);
-            sb.append("\n");
-        }
-        return sb.toString();
+        return Arrays.toString(arr);
     }
 }

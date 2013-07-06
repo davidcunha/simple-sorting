@@ -18,7 +18,7 @@ public class SelectionSortTest {
         arr.insert(80);
         arr.insert(30);
 
-        assertEquals("50\n120\n20\n80\n30\n", arr.display());
+        assertEquals("[50, 120, 20, 80, 30]", arr.display());
     }
 
     @Test
@@ -32,6 +32,6 @@ public class SelectionSortTest {
         
         SelectionSort.run(arr);
 
-        assertEquals("20\n30\n50\n80\n120\n", arr.display());
+        assertEquals("[20, 30, 50, 80, 120]", arr.display());
     }
 }
